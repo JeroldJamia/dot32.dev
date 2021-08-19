@@ -119,6 +119,8 @@ function getPageData() {
 			document.getElementById(id).parentElement.className = ""
 		}
 		window.setTimeout(fn, 32)
+	} else {
+		document.getElementById("alert").scrollIntoView();
 	}
 }
 
@@ -167,6 +169,8 @@ function contentsList() {
 			if (section.firstChild) {
 				page.appendChild(section)
 				section = document.createElement("section")
+				let div = document.createElement("div")
+				element.appendChild(div)
 			}
 		}
 		let nextElement = element.nextElementSibling
